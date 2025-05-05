@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Preline UI Dropdown</title>
+    <link href="./css/styles.css" rel="stylesheet" />
+    <!-- ✅ Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!--NAV BAR-->
+    <nav
+      class="sticky top-0 z-50 bg-white border-gray-200 "
+    >
+      <h2
+        class="font-ambit font-extrabold text-center text-white bg-green-900 hidden md:block"
+      >
+        ORDER DESSERTS FOR LOCAL PICK UP
+      </h2>
+      <div
+        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4"
+      >
+        <button
+          data-collapse-toggle="mega-menu-full-cta"
+          type="button"
+          class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+          aria-controls="mega-menu-full-cta"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Open main menu</span>
+
+          <svg
+            viewBox="0 0 37 37"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M26.25 23.0898H10.99V25.0898H26.25V23.0898Z"
+              fill="#00211A"
+            ></path>
+            <path
+              d="M26.25 17.6494H10.99V19.6494H26.25V17.6494Z"
+              fill="#00211A"
+            ></path>
+            <circle
+              cx="18.5"
+              cy="18.5"
+              r="17.5"
+              stroke="#00211A"
+              stroke-width="2"
+            ></circle>
+            <path
+              d="M26.25 12.1992H10.99V14.1992H26.25V12.1992Z"
+              fill="#00211A"
+            ></path>
+          </svg>
+        </button>
+        <a
+          href="https://flowbite.com"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img
+            src="./assets/5be957fe-c02b-4a6a-8205-7716255563a3.svg"
+            class="h-8"
+            alt="Flowbite Logo"
+          />
+        </a>
+        <a href="#order" class="md:hidden">
+          <svg
+            width="29"
+            height="29"
+            viewBox="0 0 29 29"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.4267 22.8238C12.2665 22.8238 12.9472 22.143 12.9472 21.3032C12.9472 20.4634 12.2665 19.7827 11.4267 19.7827C10.587 19.7827 9.90625 20.4634 9.90625 21.3032C9.90625 22.143 10.587 22.8238 11.4267 22.8238Z"
+              fill="#00211A"
+            ></path>
+            <path
+              d="M17.5734 22.8238C18.4132 22.8238 19.0939 22.143 19.0939 21.3032C19.0939 20.4634 18.4132 19.7827 17.5734 19.7827C16.7336 19.7827 16.0527 20.4634 16.0527 21.3032C16.0527 22.143 16.7336 22.8238 17.5734 22.8238Z"
+              fill="#00211A"
+            ></path>
+            <path
+              d="M8.65168 7.83789H7.05273L7.54662 10.4322L8.63599 16.1538L9.00435 18.0819L9.12203 18.7168H20.338L21.9134 10.4322H9.13772L8.65168 7.83789ZM20.0322 11.9997L19.0525 17.1492H10.4309L9.45116 11.9997H20.0322Z"
+              fill="#00211A"
+            ></path>
+            <circle
+              cx="14.5"
+              cy="14.5"
+              r="13.7"
+              stroke="#00211A"
+              stroke-width="1.5"
+            ></circle>
+          </svg>
+        </a>
+        <div
+          id="mega-menu-full-cta"
+          class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+        >
+          <ul
+            class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse"
+          >
+            <li>
+              <button
+                id="mega-menu-order-dropdown-button"
+                data-collapse-toggle="mega-menu-order-dropdown"
+                data-dropdown-placement="bottom"
+                class="mt-5 font-ambit font-extrabold uppercase text-2l flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 "
+              >
+                Order
+                <svg
+                  class="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                id="mega-menu-product-dropdown-button"
+                data-collapse-toggle="mega-menu-product-dropdown"
+                data-dropdown-placement="bottom"
+                class="mt-5 font-ambit font-extrabold uppercase text-2l flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 "
+              >
+                Product
+                <svg
+                  class="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                id="mega-menu-hours-locations-dropdown-button"
+                data-collapse-toggle="mega-menu-hours-locations-dropdown"
+                data-dropdown-placement="bottom"
+                class="mt-5 font-ambit font-extrabold uppercase text-2l flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 "
+              >
+                Hours & Locations
+                <svg
+                  class="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button
+                id="mega-menu-about-us-dropdown-button"
+                data-collapse-toggle="mega-menu-about-us-dropdown"
+                data-dropdown-placement="bottom"
+                class="mt-5 font-ambit font-extrabold uppercase text-2l flex items-center justify-between w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 "
+              >
+                About Us
+                <svg
+                  class="w-2.5 h-2.5 ms-3"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 10 6"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m1 1 4 4 4-4"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li class="hidden md:block">
+              <button
+                id="mega-menu-about-us-dropdown-button"
+                data-collapse-toggle="mega-menu-about-us-dropdown"
+                data-dropdown-placement="bottom"
+                class="group font-ambit font-extrabold uppercase text-2l flex items-center justify-center w-full py-2 px-3 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 "
+              >
+                <svg
+                  width="250"
+                  height="70"
+                  viewBox="0 0 247 63"
+                  class="Button__svg transition-all duration-300 group-hover:stroke-blue-600 group-hover:fill-blue-100 stroke-gray-900 fill-transparent"
+                >
+                  <path
+                    d="M16.9012 8.22445L16.9038 8.21772L16.9064 8.21095C18.4849 3.99842 22.5504 1 27.3098 1H219.51C224.269 1 228.335 3.99842 229.913 8.21095L229.916 8.21771L229.919 8.22443C230.08 8.6379 230.364 9.00663 230.773 9.26037L230.784 9.26644C231.209 9.52284 231.632 9.77538 232.052 10.026C235.484 12.0751 238.7 13.9951 241.187 16.8374C243.926 19.9661 245.82 24.2766 245.82 31.26C245.82 38.2435 243.926 42.5539 241.187 45.6827C238.7 48.525 235.484 50.445 232.051 52.4942C231.634 52.7431 231.214 52.994 230.792 53.2486C230.347 53.5072 230.07 53.9085 229.919 54.2956L229.916 54.3024L229.913 54.3091C228.335 58.5217 224.269 61.52 219.51 61.52H27.3098C22.5504 61.52 18.4849 58.5217 16.9064 54.3091L16.9038 54.3024L16.9012 54.2956C16.7394 53.8822 16.4562 53.5135 16.0464 53.2598L16.0464 53.2597L16.0355 53.2531C15.6152 53.0003 15.1972 52.7513 14.7824 52.504C11.3448 50.4558 8.12348 48.5362 5.6325 45.6902C2.89424 42.5616 1 38.2487 1 31.26C1 24.2766 2.8941 19.9661 5.6325 16.8374C8.12018 13.9951 11.3361 12.0751 14.7683 10.026C15.1854 9.77696 15.6056 9.52605 16.0282 9.27136C16.4732 9.01276 16.7498 8.61149 16.9012 8.22445Z"
+                    stroke-width="2"
+                  ></path>
+
+                  <text
+                    x="50%"
+                    y="50%"
+                    text-anchor="middle"
+                    dominant-baseline="middle"
+                    class="fill-gray-900 group-hover:fill-blue-600 text-lg font-bold"
+                    font-family="sans-serif"
+                    font-size="16"
+                  >
+                    ORDER ASAP
+                  </text>
+                </svg>
+              </button>
+            </li>
+            <!--Search-->
+            <a href="#Search" class="mt-5 hidden md:block">
+              <svg
+                width="30"
+                height="29"
+                viewBox="0 0 30 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M13.1726 7.83789C10.3333 7.83789 8.0293 10.1479 8.0293 12.9809C8.0293 15.8201 10.3394 18.124 13.1726 18.124C14.385 18.124 15.5003 17.7012 16.3802 16.9955L20.5471 21.1623L21.4051 20.3043L17.2316 16.131C17.9088 15.2598 18.3134 14.1664 18.3158 12.9816L18.3158 12.9809C18.3158 10.1418 16.0057 7.83789 13.1726 7.83789ZM9.2404 12.9809C9.2404 10.8152 11.0067 9.04897 13.1726 9.04897C15.3384 9.04897 17.1047 10.8152 17.1047 12.9809C17.1047 15.1467 15.3384 16.9129 13.1726 16.9129C11.0067 16.9129 9.2404 15.1467 9.2404 12.9809Z"
+                  fill="#00211A"
+                ></path>
+                <path
+                  d="M16.3802 16.9955L16.4863 16.8895L16.3912 16.7944L16.2863 16.8785L16.3802 16.9955ZM20.5471 21.1623L20.4411 21.2683L20.5471 21.3744L20.6532 21.2683L20.5471 21.1623ZM21.4051 20.3043L21.5112 20.4104L21.6173 20.3043L21.5112 20.1982L21.4051 20.3043ZM17.2316 16.131L17.1132 16.0389L17.032 16.1435L17.1256 16.2371L17.2316 16.131ZM18.3158 12.9816L18.1658 12.9812V12.9813L18.3158 12.9816ZM18.3158 12.9809L18.4658 12.9814V12.9809H18.3158ZM8.1793 12.9809C8.1793 10.2306 10.4163 7.98789 13.1726 7.98789V7.68789C10.2504 7.68789 7.8793 10.0651 7.8793 12.9809H8.1793ZM13.1726 17.974C10.4221 17.974 8.1793 15.7371 8.1793 12.9809H7.8793C7.8793 15.9031 10.2567 18.274 13.1726 18.274V17.974ZM16.2863 16.8785C15.432 17.5637 14.3495 17.974 13.1726 17.974V18.274C14.4205 18.274 15.5687 17.8387 16.474 17.1125L16.2863 16.8785ZM20.6532 21.0562L16.4863 16.8895L16.2741 17.1016L20.4411 21.2683L20.6532 21.0562ZM21.2991 20.1982L20.4411 21.0562L20.6532 21.2683L21.5112 20.4104L21.2991 20.1982ZM17.1256 16.2371L21.2991 20.4104L21.5112 20.1982L17.3377 16.0249L17.1256 16.2371ZM18.1658 12.9813C18.1634 14.1316 17.7708 15.193 17.1132 16.0389L17.3501 16.2231C18.0469 15.3267 18.4633 14.2012 18.4658 12.9819L18.1658 12.9813ZM18.1658 12.9805L18.1658 12.9812L18.4658 12.982L18.4658 12.9814L18.1658 12.9805ZM13.1726 7.98789C15.923 7.98789 18.1658 10.2248 18.1658 12.9809H18.4658C18.4658 10.0588 16.0885 7.68789 13.1726 7.68789V7.98789ZM13.1726 8.89897C10.9239 8.89897 9.0904 10.7324 9.0904 12.9809H9.3904C9.3904 10.8981 11.0896 9.19897 13.1726 9.19897V8.89897ZM17.2547 12.9809C17.2547 10.7324 15.4213 8.89897 13.1726 8.89897V9.19897C15.2556 9.19897 16.9547 10.8981 16.9547 12.9809H17.2547ZM13.1726 17.0629C15.4213 17.0629 17.2547 15.2295 17.2547 12.9809H16.9547C16.9547 15.0638 15.2556 16.7629 13.1726 16.7629V17.0629ZM9.0904 12.9809C9.0904 15.2295 10.9239 17.0629 13.1726 17.0629V16.7629C11.0896 16.7629 9.3904 15.0638 9.3904 12.9809H9.0904Z"
+                  fill="#00211A"
+                ></path>
+                <circle
+                  cx="14.6895"
+                  cy="14.5"
+                  r="13.75"
+                  stroke="#00211A"
+                  stroke-width="1.5"
+                ></circle>
+              </svg>
+            </a>
+            <!--Profile-->
+            <a href="#Profile" class="mt-5 hidden md:block">
+              <svg
+                width="29"
+                height="29"
+                viewBox="0 0 29 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.7477 14.5313C18.0722 13.7867 18.9737 12.3601 18.9737 10.7377C18.9737 8.33929 17.022 6.37988 14.6158 6.37988C12.2174 6.37988 10.2579 8.33146 10.2579 10.7377C10.2579 12.3679 11.1593 13.7867 12.4839 14.5313C9.7877 15.4248 7.83594 17.972 7.83594 20.9661H9.40351C9.40351 18.0896 11.7393 15.7539 14.6158 15.7539C17.4923 15.7539 19.8279 18.0896 19.8279 20.9661H21.3954C21.3954 17.972 19.4439 15.4326 16.7477 14.5313ZM14.6158 7.94745C16.152 7.94745 17.4061 9.20146 17.4061 10.7377C17.4061 12.2739 16.152 13.528 14.6158 13.528C13.0796 13.528 11.8255 12.2739 11.8255 10.7377C11.8255 9.20146 13.0796 7.94745 14.6158 7.94745Z"
+                  fill="#00211A"
+                ></path>
+                <circle
+                  cx="14.5"
+                  cy="14.5"
+                  r="13.75"
+                  stroke="#00211A"
+                  stroke-width="1.5"
+                ></circle>
+              </svg>
+            </a>
+            <!--order-->
+            <a href="#order" class="mt-5 hidden md:block">
+              <svg
+                width="29"
+                height="29"
+                viewBox="0 0 29 29"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.4267 22.8238C12.2665 22.8238 12.9472 22.143 12.9472 21.3032C12.9472 20.4634 12.2665 19.7827 11.4267 19.7827C10.587 19.7827 9.90625 20.4634 9.90625 21.3032C9.90625 22.143 10.587 22.8238 11.4267 22.8238Z"
+                  fill="#00211A"
+                ></path>
+                <path
+                  d="M17.5734 22.8238C18.4132 22.8238 19.0939 22.143 19.0939 21.3032C19.0939 20.4634 18.4132 19.7827 17.5734 19.7827C16.7336 19.7827 16.0527 20.4634 16.0527 21.3032C16.0527 22.143 16.7336 22.8238 17.5734 22.8238Z"
+                  fill="#00211A"
+                ></path>
+                <path
+                  d="M8.65168 7.83789H7.05273L7.54662 10.4322L8.63599 16.1538L9.00435 18.0819L9.12203 18.7168H20.338L21.9134 10.4322H9.13772L8.65168 7.83789ZM20.0322 11.9997L19.0525 17.1492H10.4309L9.45116 11.9997H20.0322Z"
+                  fill="#00211A"
+                ></path>
+                <circle
+                  cx="14.5"
+                  cy="14.5"
+                  r="13.7"
+                  stroke="#00211A"
+                  stroke-width="1.5"
+                ></circle>
+              </svg>
+            </a>
+          </ul>
+        </div>
+      </div>
+      <!--Drops-->
+      <!--ORDER-->
+      <div
+        id="mega-menu-order-dropdown"
+        class="mt-1 bg-white border-gray-200 shadow-xs border-y "
+      >
+        <div
+          class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 md:grid-cols-3 md:px-6"
+        >
+          <ul
+            class="space-y-4 sm:mb-4 md:mb-0"
+            aria-labelledby="mega-menu-order-button"
+          >
+            <h2 class="mb-2 font-semibold text-gray-900 ">
+              ORDER
+            </h2>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Advanced Order for Local Pick Up
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Same Day Pick Up or Delivery
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Nationwide Shipping
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Corporate Catering
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Gifting & Events
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--product-->
+      <div
+        id="mega-menu-product-dropdown"
+        class="mt-1 bg-white border-gray-200 shadow-xs border-y "
+      >
+        <div
+          class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500  md:grid-cols-4 md:px-4"
+        >
+          <ul
+            class="space-y-4 sm:mb-4 md:mb-0"
+            aria-labelledby="mega-menu-product-button"
+          >
+            <h2 class="mb-2 font-semibold text-gray-900 ">
+              SHOP BAKERY PRODUCTS
+            </h2>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Fresh Banana Pudding
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Brownies & Bars
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Cakes
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Cheesecakes
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Cookies
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Cupcakes
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Icebox Desserts
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                In-Store Gift Cards
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Online Only Gift Cards
+              </a>
+            </li>
+          </ul>
+          <ul class="mt-10 mb-4 space-y-4 md:mb-0">
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Merchandise
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Pudding of the Month
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Pudding Club Subscription
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Sampler Packs
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Birthdays 🎂
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Spring Treats🌸
+              </a>
+            </li>
+          </ul>
+          <ul class="mb-4 space-y-4 md:mb-0">
+            <h2 class="mb-2 font-semibold text-gray-900 ">
+              VIEW GROCERY PRODUCTS
+            </h2>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Banana Pudding
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Banana Pudding Cookies
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                DoorDash Exclusive Banana Pudding
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Store Locator
+              </a>
+            </li>
+          </ul>
+          <div class="flex flex-row justify-center items-start gap-2">
+            <div class="mt-4 w-full max-w-sm mx-auto">
+              <a
+                href="#"
+                class="relative block w-20 h-20 mt-6 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
+                style="
+                  background-image: url(./assets/GoPuffPuffrNutterLaunch-02_260x265_crop_center.jpg.jpeg);
+                "
+              >
+              </a>
+              <p
+                class="mt-4 w-20 h-20 text-center leading-tight tracking-tight"
+              >
+                New! Gopuff Exclusive Puff’rnutter Cupcake
+              </p>
+            </div>
+            <div class="mt-4 w-full max-w-sm mx-auto">
+              <a
+                href="#"
+                class="relative block w-20 h-20 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
+                style="
+                  background-image: url(./assets/Products/Stylized_Ecomm_Mother_s_Day_Group_260x265_crop_center.avif);
+                "
+              >
+              </a>
+              <p
+                class="mt-4 w-20 h-20 text-center leading-tight tracking-tight"
+              >
+                Mother's Day Treats
+              </p>
+            </div>
+            <div class="mt-4 w-full max-w-sm mx-auto">
+              <a
+                href="#"
+                class="relative block w-20 h-20 mt-6 bg-center bg-no-repeat bg-cover rounded-lg bg-blend-multiply hover:bg-blend-soft-light "
+                style="
+                  background-image: url(./assets/GroceryCropped_2407_240710_Magnolia-Bakery_PRODUCT_0177-v3_Large_a41c86d7-964b-44d5-9c84-2746c9a829a3_260x265_crop_center.jpg.jpeg);
+                "
+              >
+              </a>
+              <p
+                class="mt-4 w-20 h-20 text-center leading-tight tracking-tight"
+              >
+                New! Frozen-To-Thaw Banana Pudding
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        id="mega-menu-hours-locations-dropdown"
+        class="mt-1 bg-white border-gray-200 shadow-xs border-y "
+      >
+        <div
+          class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500  md:grid-cols-3 md:px-6"
+        >
+          <ul
+            class="space-y-4 sm:mb-4 md:mb-0"
+            aria-labelledby="mega-menu-hours-locations-button"
+          >
+            <h2 class="mb-2 font-semibold text-gray-900 ">
+              NEW YORK
+            </h2>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Bleecker Street
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Bloomingdales
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Central Park South
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Grand Central Terminal
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Grand Central Madison
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Hudson Yards
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                LaGuardia Airport Terminal C
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Moynihan Train Hall
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Rockefeller Center
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Upper West Side
+              </a>
+            </li>
+          </ul>
+          <ul class="mt-3 md:mt-0 space-y-4 sm:mb-4 md:mb-0">
+            <h2 class="mb-2 font-semibold text-gray-900 ">
+              CALIFORNIA
+            </h2>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Los Angeles (West Hollywood)
+              </a>
+            </li>
+
+            <h2 class="mb-2 font-semibold text-gray-900 ">
+              ILLINOIS
+            </h2>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Chicago (Loop)
+              </a>
+            </li>
+          </ul>
+          <ul class="mt-3 md:mt-0 space-y-4 sm:mb-4 md:mb-0">
+            <h2 class="mb-2 font-semibold text-gray-900 ">
+              INTERNATIONAL
+            </h2>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                India
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Jordan
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Kuwait
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Philippines
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Qatar
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Türkiye
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                UAE
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!--about-us-->
+      <div
+        id="mega-menu-about-us-dropdown"
+        class="mt-1 bg-white border-gray-200 shadow-xs border-y "
+      >
+        <div
+          class="grid max-w-screen-xl px-4 py-5 mx-auto text-sm text-gray-500 md:grid-cols-3 md:px-6"
+        >
+          <ul
+            class="space-y-4 sm:mb-4 md:mb-0"
+            aria-labelledby="mega-menu-about-us-button"
+          >
+            <h2 class="mb-2 font-semibold text-gray-900 ">
+              ABOUT US
+            </h2>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Our Story
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Careers
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="hover:underline hover:text-blue-600 "
+              >
+                Newsroom
+              </a>
+            </li>
+          </ul>
+
+          <ul class="mt-3 md:mt-0 mb-4 space-y-4">
+            <li>
+              <a
+                href="#"
+                class="mb-2 font-semibold text-gray-900  hover:underline hover:text-blue-600 "
+              >
+                CONTACT US
+              </a>
+            </li>
+            <li>
+              <a
+                href="#"
+                class="mb-2 font-semibold text-gray-900  hover:underline hover:text-blue-600 "
+              >
+                HELP CENTER
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Slide Bar-->
+    <div id="magnolia-carousel" class="relative w-full" data-carousel="slide">
+      <!-- Carousel wrapper -->
+      <div class="relative h-[570px] md:h-[700px] overflow-hidden rounded-lg">
+        <!-- Item 1 -->
+        <div
+          class="hero-slide hidden duration-1000 ease-in-out"
+          data-carousel-item
+        >
+          <img
+            src="./assets/carousel/SpringHompage_1_2048x.jpg.jpeg"
+            class="carousel-img"
+            alt="Spring Collection"
+          />
+          <div class="overlay overlay-bottom-left">
+            <div class="relative w-[300px] md:w-[450px]">
+              <svg
+                aria-hidden="true"
+                class="w-full h-auto text-emerald-200 opacity-75"
+                viewBox="0 0 522 657"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M261 0C223.013 0 186.954 10.2079 154.401 28.565C153.086 29.3098 151.596 29.7042 150.063 29.7042H93.5867C90.213 29.7042 87.0146 31.5881 85.5687 34.6549C74.9658 57.1303 56.7829 75.3122 34.3063 85.9147C31.2393 87.3605 29.3553 90.5588 29.3553 93.9323V175.29C29.3553 176.429 29.1363 177.525 28.6981 178.576C10.3401 223.527 0 274.48 0 328.5C0 382.52 10.3401 433.473 28.6981 478.423C29.1363 479.475 29.3553 480.57 29.3553 481.709V563.068C29.3553 566.441 31.2393 569.64 34.3063 571.085C56.7829 581.688 74.9658 599.87 85.5687 622.345C87.0146 625.412 90.213 627.296 93.5867 627.296H150.063C151.596 627.296 153.086 627.69 154.401 628.435C186.954 646.792 223.013 657 261 657C298.987 657 335.046 646.792 367.599 628.435C368.914 627.69 370.404 627.296 371.937 627.296H428.413C431.787 627.296 434.985 625.412 436.431 622.345C447.034 599.87 465.217 581.688 487.694 571.085C490.761 569.64 492.645 566.441 492.645 563.068V481.709C492.645 480.57 492.864 479.475 493.302 478.423C511.66 433.473 522 382.52 522 328.5C522 274.48 511.66 223.527 493.302 178.576C492.864 177.525 492.645 176.429 492.645 175.29V93.9323C492.645 90.5588 490.761 87.3605 487.694 85.9147C465.217 75.3122 447.034 57.1303 436.431 34.6549C434.985 31.5881 431.787 29.7042 428.413 29.7042H371.937C370.404 29.7042 368.914 29.3098 367.599 28.565C335.046 10.2518 298.987 0 261 0Z"
+                ></path>
+              </svg>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <h2
+                  class="font-demiella text-3xl md:text-[2.5rem] font-bold mb-4 text-[#285430]"
+                >
+                  Spring Collection
+                </h2>
+                <p
+                  class="font-ambit font-semibold text-sm md:text-base mb-6 text-[#285430] max-w-[80%]"
+                >
+                  Discover our fresh and vibrant spring treats
+                </p>
+                <button
+                  class="relative inline-block px-6 py-2 font-bold text-white bg-[#285430] border-none overflow-hidden z-10 transition-all duration-300 ease-in-out hover:bg-[#1c3c21] rounded-lg"
+                >
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div
+          class="hero-slide hidden duration-1000 ease-in-out"
+          data-carousel-item
+        >
+          <img
+            src="./assets/carousel/MothersDayHomepage_8412197b-e864-4f22-82a9-50e841c80225_2048x.jpg.jpeg"
+            class="carousel-img"
+            alt="Mother's Day Collection"
+          />
+          <div class="overlay overlay-bottom-left">
+            <div class="relative w-[300px] md:w-[450px]">
+              <svg
+                aria-hidden="true"
+                class="w-full h-auto text-lime-200 opacity-75"
+                viewBox="0 0 532 632"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M532 76.4861C532 71.582 528.122 67.4877 523.207 67.3077C425.131 63.6634 365.519 0 266 0C166.481 0 106.869 63.6634 8.7928 67.3077C3.87773 67.4877 0 71.582 0 76.4861V560.103C0 563.477 1.89368 566.537 4.86978 568.202C28.7237 581.609 47.8879 602.08 59.2512 626.691C60.7843 629.975 64.1663 632 67.7737 632H464.226C467.833 632 471.26 629.975 472.749 626.691C484.112 602.08 503.231 581.609 527.13 568.202C530.106 566.537 532 563.477 532 560.103V76.4861V76.4861Z"
+                ></path>
+              </svg>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <h2
+                  class="font-demiella text-3xl md:text-[2.5rem] font-bold mb-4 text-[#285430]"
+                >
+                  Mother's Day Specials
+                </h2>
+                <p
+                  class="font-ambit font-semibold text-sm md:text-base mb-6 text-[#285430] max-w-[80%]"
+                >
+                  Celebrate Mom with our special treats
+                </p>
+                <button
+                  class="relative inline-block px-6 py-2 font-bold text-white bg-[#285430] border-none overflow-hidden z-10 transition-all duration-300 ease-in-out hover:bg-[#1c3c21] rounded-lg"
+                >
+                  ORDER NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div
+          class="hero-slide hidden duration-1000 ease-in-out"
+          data-carousel-item
+        >
+          <img
+            src="./assets/carousel/MagnoliaBakery_Hero_2048x.jpg.jpeg"
+            class="carousel-img"
+            alt="Magnolia Bakery"
+          />
+          <div class="overlay overlay-bottom-left">
+            <div class="relative w-[300px] md:w-[450px]">
+              <svg
+                aria-hidden="true"
+                class="w-full h-auto text-sky-200 opacity-75"
+                viewBox="0 0 532 638"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M 527.128906 64.402344 C 503.277344 50.871094 484.113281 30.203125 472.75 5.359375 C 471.21875 2.042969 467.832031 0 464.226562 0 L 67.773438 0 C 64.167969 0 60.738281 2.042969 59.25 5.359375 C 47.886719 30.203125 28.769531 50.871094 4.871094 64.402344 C 1.894531 66.085938 0 69.171875 0 72.578125 L 0 565.421875 C 0 568.828125 1.894531 571.914062 4.871094 573.597656 C 28.722656 587.128906 47.886719 607.796875 59.25 632.640625 C 60.785156 635.953125 64.167969 638 67.773438 638 L 464.226562 638 C 467.832031 638 471.261719 635.953125 472.75 632.640625 C 484.113281 607.796875 503.234375 587.128906 527.128906 573.597656 C 530.105469 571.914062 532 568.828125 532 565.421875 L 532 72.625 C 532 69.171875 530.105469 66.085938 527.128906 64.402344 Z M 527.128906 64.402344 "
+                ></path>
+              </svg>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <h2
+                  class="font-demiella text-3xl md:text-[2.5rem] font-bold mb-4 text-[#285430]"
+                >
+                  Our Story
+                </h2>
+                <p
+                  class="font-ambit font-semibold text-sm md:text-base mb-6 text-[#285430] max-w-[80%]"
+                >
+                  Explore the history of Magnolia Bakery
+                </p>
+                <button
+                  class="relative inline-block px-6 py-2 font-bold text-white bg-[#285430] border-none overflow-hidden z-10 transition-all duration-300 ease-in-out hover:bg-[#1c3c21] rounded-lg"
+                >
+                  LEARN MORE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div
+          class="hero-slide hidden duration-1000 ease-in-out"
+          data-carousel-item
+        >
+          <img
+            src="./assets/carousel/Homepage_f9638f8d-29b6-4dc0-b78f-19b69f02488a_2048x.jpg.jpeg"
+            class="carousel-img"
+            alt="Seasonal Collection"
+          />
+          <div class="overlay overlay-bottom-left">
+            <div class="relative w-[300px] md:w-[450px]">
+              <svg
+                aria-hidden="true"
+                class="w-full h-auto text-yellow-200 opacity-75"
+                viewBox="0 0 533 605"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M533 92.7855C533 83.5774 529.202 75.2945 523.107 69.3467C519.353 65.69 519.485 59.9184 523.195 56.2175C534.06 45.5115 537.505 27.3598 525.094 10.0451C524.52 9.20805 523.769 8.45898 522.93 7.88623C505.926 -4.22963 488.083 -1.18962 477.262 9.16394C473.685 12.6004 468.12 12.6886 464.542 9.20804C458.624 3.5246 450.586 0 441.664 0C432.786 0 424.704 3.5246 418.786 9.20804C415.252 12.6445 409.687 12.6445 406.154 9.20804C400.236 3.48054 392.197 0 383.276 0C374.354 0 366.316 3.5246 360.398 9.20804C356.864 12.6445 351.299 12.6445 347.766 9.20804C341.848 3.48054 333.81 0 324.888 0C316.011 0 307.928 3.5246 302.01 9.20804C298.477 12.6445 292.911 12.6445 289.378 9.20804C283.46 3.48054 275.421 0 266.5 0C257.578 0 249.54 3.5246 243.622 9.20804C240.088 12.6445 234.523 12.6445 230.99 9.20804C225.072 3.48054 217.034 0 208.112 0C199.235 0 191.152 3.5246 185.234 9.20804C181.701 12.6445 176.135 12.6445 172.602 9.20804C166.684 3.48054 158.646 0 149.724 0C140.846 0 132.764 3.5246 126.846 9.20804C123.312 12.6445 117.748 12.6445 114.214 9.20804C108.296 3.48054 100.258 0 91.3361 0C82.4586 0 74.3762 3.5246 68.4579 9.20804C64.8804 12.6445 59.3154 12.6004 55.738 9.16394C44.9614 -1.18962 27.0739 -4.27369 10.0698 7.88623C9.23064 8.45898 8.47985 9.20805 7.90569 10.0451C-4.50507 27.3598 -1.06012 45.5115 9.80481 56.2175C13.5148 59.8743 13.6474 65.69 9.89323 69.3467C3.79827 75.2945 0 83.6215 0 92.7855C0 101.949 3.75406 110.232 9.84902 116.18C13.559 119.837 13.559 125.652 9.84902 129.309C3.79822 135.257 0 143.54 0 152.704C0 161.868 3.75406 170.151 9.84902 176.099C13.559 179.755 13.559 185.571 9.84902 189.228C3.79822 195.175 0 203.458 0 212.622C0 221.786 3.75406 230.069 9.84902 236.017C13.559 239.674 13.559 245.489 9.84902 249.146C3.79822 255.094 0 263.377 0 272.541C0 281.705 3.75406 289.988 9.84902 295.935C13.559 299.592 13.559 305.408 9.84902 309.065C3.79822 315.012 0 323.295 0 332.459C0 341.623 3.75406 349.906 9.84902 355.854C13.559 359.511 13.559 365.326 9.84902 368.983C3.79822 374.931 0 383.214 0 392.378C0 401.542 3.75406 409.825 9.84902 415.772C13.559 419.429 13.559 425.245 9.84902 428.901C3.79822 434.849 0 443.132 0 452.296C0 461.46 3.75406 469.743 9.84902 475.691C13.559 479.348 13.559 485.163 9.84902 488.82C3.79822 494.768 0 503.051 0 512.215C0 521.423 3.79827 529.705 9.89323 535.653C13.6474 539.31 13.5148 545.082 9.80481 548.782C-1.06012 559.489 -4.50507 577.64 7.90569 594.955C8.47985 595.792 9.23064 596.541 10.0698 597.114C27.0739 609.23 44.9172 606.19 55.738 595.836C59.3154 592.4 64.8804 592.311 68.4579 595.792C74.3762 601.475 82.4145 605 91.3361 605C100.214 605 108.296 601.475 114.214 595.792C117.748 592.355 123.312 592.355 126.846 595.792C132.764 601.519 140.802 605 149.724 605C158.601 605 166.684 601.475 172.602 595.792C176.135 592.355 181.701 592.355 185.234 595.792C191.152 601.519 199.235 605 208.112 605C216.989 605 225.072 601.475 230.99 595.792C234.523 592.355 240.088 592.355 243.622 595.792C249.54 601.519 257.578 605 266.5 605C275.421 605 283.46 601.475 289.378 595.792C292.911 592.355 298.477 592.355 302.01 595.792C307.928 601.519 315.966 605 324.888 605C333.765 605 341.848 601.475 347.766 595.792C351.299 592.355 356.864 592.355 360.398 595.792C366.316 601.519 374.354 605 383.276 605C392.197 605 400.236 601.475 406.154 595.792C409.687 592.355 415.252 592.355 418.786 595.792C424.704 601.519 432.742 605 441.664 605C450.541 605 458.624 601.475 464.542 595.792C468.12 592.355 473.685 592.4 477.262 595.836C488.039 606.19 505.926 609.274 522.93 597.114C523.769 596.541 524.52 595.792 525.094 594.955C537.505 577.64 534.06 559.489 523.195 548.782C519.485 545.126 519.353 539.31 523.107 535.653C529.202 529.705 533 521.379 533 512.215C533 503.051 529.246 494.768 523.151 488.82C519.441 485.163 519.441 479.348 523.151 475.691C529.202 469.743 533 461.46 533 452.296C533 443.132 529.246 434.849 523.151 428.901C519.441 425.245 519.441 419.429 523.151 415.772C529.202 409.825 533 401.542 533 392.378C533 383.214 529.246 374.931 523.151 368.983C519.441 365.326 519.441 359.511 523.151 355.854C529.202 349.906 533 341.623 533 332.459C533 323.295 529.246 315.012 523.151 309.065C519.441 305.408 519.441 299.592 523.151 295.935C529.202 289.988 533 281.705 533 272.541C533 263.377 529.246 255.094 523.151 249.146C519.441 245.489 519.441 239.674 523.151 236.017C529.202 230.069 533 221.786 533 212.622C533 203.458 529.246 195.175 523.151 189.228C519.441 185.571 519.441 179.755 523.151 176.099C529.202 170.151 533 161.868 533 152.704C533 143.54 529.246 135.257 523.151 129.309C519.441 125.652 519.441 119.837 523.151 116.18C529.246 110.232 533 101.949 533 92.7855Z"
+                ></path>
+              </svg>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <h2
+                  class="font-demiella text-3xl md:text-[2.5rem] font-bold mb-4 text-[#285430]"
+                >
+                  Seasonal Specials
+                </h2>
+                <p
+                  class="font-ambit font-semibold text-sm md:text-base mb-6 text-[#285430] max-w-[80%]"
+                >
+                  Limited time seasonal treats
+                </p>
+                <button
+                  class="relative inline-block px-6 py-2 font-bold text-white bg-[#285430] border-none overflow-hidden z-10 transition-all duration-300 ease-in-out hover:bg-[#1c3c21] rounded-lg"
+                >
+                  SHOP NOW
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div
+          class="hero-slide hidden duration-1000 ease-in-out"
+          data-carousel-item
+        >
+          <img
+            src="./assets/carousel/CookbookHomepage_1_2048x.jpg.jpeg"
+            class="carousel-img"
+            alt="Cookbook"
+          />
+          <div class="overlay overlay-bottom-left">
+            <div class="relative w-[300px] md:w-[450px]">
+              <svg
+                aria-hidden="true"
+                class="w-full h-auto text-teal-200 opacity-75"
+                viewBox="0 0 522 657"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M261 0C223.013 0 186.954 10.2079 154.401 28.565C153.086 29.3098 151.596 29.7042 150.063 29.7042H93.5867C90.213 29.7042 87.0146 31.5881 85.5687 34.6549C74.9658 57.1303 56.7829 75.3122 34.3063 85.9147C31.2393 87.3605 29.3553 90.5588 29.3553 93.9323V175.29C29.3553 176.429 29.1363 177.525 28.6981 178.576C10.3401 223.527 0 274.48 0 328.5C0 382.52 10.3401 433.473 28.6981 478.423C29.1363 479.475 29.3553 480.57 29.3553 481.709V563.068C29.3553 566.441 31.2393 569.64 34.3063 571.085C56.7829 581.688 74.9658 599.87 85.5687 622.345C87.0146 625.412 90.213 627.296 93.5867 627.296H150.063C151.596 627.296 153.086 627.69 154.401 628.435C186.954 646.792 223.013 657 261 657C298.987 657 335.046 646.792 367.599 628.435C368.914 627.69 370.404 627.296 371.937 627.296H428.413C431.787 627.296 434.985 625.412 436.431 622.345C447.034 599.87 465.217 581.688 487.694 571.085C490.761 569.64 492.645 566.441 492.645 563.068V481.709C492.645 480.57 492.864 479.475 493.302 478.423C511.66 433.473 522 382.52 522 328.5C522 274.48 511.66 223.527 493.302 178.576C492.864 177.525 492.645 176.429 492.645 175.29V93.9323C492.645 90.5588 490.761 87.3605 487.694 85.9147C465.217 75.3122 447.034 57.1303 436.431 34.6549C434.985 31.5881 431.787 29.7042 428.413 29.7042H371.937C370.404 29.7042 368.914 29.3098 367.599 28.565C335.046 10.2518 298.987 0 261 0Z"
+                ></path>
+              </svg>
+              <div
+                class="absolute inset-0 flex flex-col justify-center items-center text-white text-center p-8"
+              >
+                <h2
+                  class="font-demiella text-3xl md:text-[2.5rem] font-bold mb-4 text-[#285430]"
+                >
+                  Order Our Newest Handbook
+                </h2>
+                <p
+                  class="font-ambit font-semibold text-sm md:text-base mb-6 text-[#285430] max-w-[80%]"
+                >
+                  Enjoy beloved Magnolia Bakery recipes at home with our latest
+                  book: The Magnolia Bakery Handbook of Icebox Desserts
+                </p>
+                <button
+                  class="relative inline-block px-6 py-2 font-bold text-white bg-[#285430] border-none overflow-hidden z-10 transition-all duration-300 ease-in-out hover:bg-[#1c3c21] rounded-lg"
+                >
+                  ORDER HERE
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute bottom-5 left-0 right-0 flex justify-center z-30 space-x-3 rtl:space-x-reverse"
+      >
+        <button
+          type="button"
+          class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#285430]/40 transition-colors duration-300 ease-in-out"
+          aria-current="true"
+          aria-label="Slide 1"
+          data-carousel-slide-to="0"
+        ></button>
+        <button
+          type="button"
+          class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#285430]/40 transition-colors duration-300 ease-in-out"
+          aria-current="false"
+          aria-label="Slide 2"
+          data-carousel-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#285430]/40 transition-colors duration-300 ease-in-out"
+          aria-current="false"
+          aria-label="Slide 3"
+          data-carousel-slide-to="2"
+        ></button>
+        <button
+          type="button"
+          class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#285430]/40 transition-colors duration-300 ease-in-out"
+          aria-current="false"
+          aria-label="Slide 4"
+          data-carousel-slide-to="3"
+        ></button>
+        <button
+          type="button"
+          class="w-2 h-2 md:w-3 md:h-3 rounded-full bg-[#285430]/40 transition-colors duration-300 ease-in-out"
+          aria-current="false"
+          aria-label="Slide 5"
+          data-carousel-slide-to="4"
+        ></button>
+      </div>
+      <!-- Previous Button -->
+      <button
+        type="button"
+        class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-prev
+      >
+        <span
+          class="inline-flex items-center justify-center w-5 h-5 md:w-10 md:h-10 rounded-full border border-[#285430] bg-transparent group-hover:bg-[#285430] transition-all duration-300"
+        >
+          <svg
+            class="w-2 h-2 md:w-3 md:h-3 text-[#285430] group-hover:text-white rtl:rotate-180 transition-colors duration-300"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M5 1 1 5l4 4"
+            />
+          </svg>
+          <span class="sr-only">Previous</span>
+        </span>
+      </button>
+
+      <!-- Next Button -->
+      <button
+        type="button"
+        class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+        data-carousel-next
+      >
+        <span
+          class="inline-flex items-center justify-center w-5 h-5 md:w-10 md:h-10 rounded-full border border-[#285430] bg-transparent group-hover:bg-[#285430] transition-all duration-300"
+        >
+          <svg
+            class="w-2 h-2 md:w-3 md:h-3 text-[#285430] group-hover:text-white rtl:rotate-180 transition-colors duration-300"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 6 10"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m1 9 4-4-4-4"
+            />
+          </svg>
+          <span class="sr-only">Next</span>
+        </span>
+      </button>
+    </div>
+    <!--Product-->
+    <div id="Product">
+      <h2
+        class="fade-in mt-7 font-extrabold text-5xl text-center font-demiella md:text-7xl font-bold mb-4 text-[#285430]"
+      >
+        Our Products
+      </h2>
+      <p
+        class="fade-in ml-[50px] pr-[50px] md:ml-[128px] md:pr-[128px] text-green font-ambit text-center font-semibold md:text-2xl"
+      >
+        For more than 25 years, Magnolia Bakery has been making America’s
+        favorite baked goods the old-fashioned way: from scratch, in small
+        batches, and using the finest ingredients.
+      </p>
+      <a
+        href=""
+        class="fade-in block mx-auto font-bold text-[#285430] underline text-center"
+      >
+        View More
+      </a>
+      <div class="fade-in md:flex justify-end mt-4">
+        <button type="button" class="px-4 group" onclick="rotateCards()">
+          <span
+            class="inline-flex items-center justify-center w-5 h-5 md:w-10 md:h-10 rounded-full border border-[#285430] bg-transparent group-hover:bg-[#285430] transition-all duration-300"
+          >
+            <svg
+              class="w-2 h-2 md:w-3 md:h-3 text-[#285430] group-hover:text-white rtl:rotate-180 transition-colors duration-300"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M5 1 1 5l4 4"
+              />
+            </svg>
+            <span class="sr-only">Previous</span>
+          </span>
+        </button>
+
+        <!-- Next Button -->
+        <button type="button" class="group" onclick="rotateCards()">
+          <span
+            class="inline-flex items-center justify-center w-5 h-5 md:w-10 md:h-10 rounded-full border border-[#285430] bg-transparent group-hover:bg-[#285430] transition-all duration-300"
+          >
+            <svg
+              class="w-2 h-2 md:w-3 md:h-3 text-[#285430] group-hover:text-white rtl:rotate-180 transition-colors duration-300"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 6 10"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m1 9 4-4-4-4"
+              />
+            </svg>
+            <span class="sr-only">Next</span>
+          </span>
+        </button>
+      </div>
+      <div class="mb-4 relative w-full overflow-hidden p-4">
+        <!-- Slide Container -->
+        <div
+          id="carousel"
+          class="fade-in flex transition-transform duration-500 ease-in-out gap-4"
+        >
+        </div>
+      </div>
+    </div>
+    <!--Treats-->
+    <div id="Treats" class="bg-emerald-200">
+      <h2
+        class="fade-in p-8 font-extrabold text-4xl text-center font-demiella md:text-7xl font-bold mb-4 text-[#285430]"
+      >
+        Treats for any Occasion
+      </h2>
+      <p
+        class="fade-in mx-8 md:mx-32 text-green font-ambit text-center font-semibold md:text-2xl"
+      >
+        We’ve got you covered for any holiday, special occasion, or cause for
+        celebration.
+      </p>
+      <a
+        href="#"
+        class="fade-in block mx-auto font-bold text-[#285430] underline text-center mb-8"
+      >
+        View More
+      </a>
+
+      <!-- Image Container -->
+      <div class="grid gap-8 p-4 md:grid-cols-4">
+        <!-- Card 1 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden w-full mb-6">
+          <img
+            src="./assets/Treats/Classic_Banana_Pudding_1_500x600_crop_center.jpg.jpeg"
+            alt="Best Sellers"
+            class="w-full h-64 object-cover md:h-72"
+          />
+          <div class="p-2 text-center font-medium text-gray-700">
+            Best Sellers
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden w-full mb-6">
+          <img
+            src="./assets/Treats/Birthday__10_500x600_crop_center.jpg.jpeg"
+            alt="Birthday"
+            class="w-full h-64 object-cover md:h-72"
+          />
+          <div class="p-2 text-center font-medium text-gray-700">Birthday</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden w-full mb-6">
+          <img
+            src="./assets/Treats/Grop_Shot_25335_1_500x600_crop_center.jpg.jpeg"
+            alt="Gifts Under $50"
+            class="w-full h-64 object-cover md:h-72"
+          />
+          <div class="p-2 text-center font-medium text-gray-700">
+            Gifts Under $50
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden w-full mb-6">
+          <img
+            src="./assets/Treats/Mini_Van_Van_6PK_500x600_crop_center.jpg.jpeg"
+            alt="Lotsa Chocolate!"
+            class="w-full h-64 object-cover md:h-72"
+          />
+          <div class="p-2 text-center font-medium text-gray-700">
+            Lotsa Chocolate!
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Delivery -->
+    <div id="Delivery" class="">
+      <h2
+        class="fade-in p-8 font-extrabold text-4xl text-center font-demiella md:text-7xl font-bold mb-4 text-[#285430]"
+      >
+        Delivery and Pick Up Options
+      </h2>
+      <p
+        class="fade-in mx-8 md:mx-32 text-green font-ambit text-center font-semibold md:text-2xl"
+      >
+        We make it easy for you to get Magnolia Bakery’s best, wherever you are.
+        Order now for nationwide shipping, place an order to pickup at your
+        local shop, or get in touch with our team to arrange custom catering for
+        your next event.
+      </p>
+      <a
+        href="#"
+        class="fade-in block mx-auto font-bold text-[#285430] underline text-right p-8 mb-2"
+      >
+        Learn More
+      </a>
+
+      <!-- Image Container -->
+      <div class="grid p-[20px] md:grid-cols-3">
+        <!-- Card 1 -->
+        <div class="bg-white overflow-hidden w-full mb-6">
+          <img
+            src="./assets/Delivery/website01_1_900x.png"
+            alt="Best Sellers"
+            class="w-full h-64 object-cover md:h-auto"
+          />
+          <div class="p-2 text-center font-medium text-gray-700">
+            Best Sellers
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white overflow-hidden w-full mb-6">
+          <img
+            src="./assets/Delivery/website02_2_900x.png"
+            alt="Birthday"
+            class="w-full h-64 object-cover md:h-auto"
+          />
+          <div class="p-2 text-center font-medium text-gray-700">Birthday</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white overflow-hidden w-full mb-6">
+          <img
+            src="./assets/Delivery/website03_900x.png"
+            alt="Gifts Under $50"
+            class="w-full h-64 object-cover md:h-auto"
+          />
+          <div class="p-2 text-center font-medium text-gray-700">
+            Gifts Under $50
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Events-->
+    <div id="Events" class="grid md:grid-cols-2 bg-[#FFC9CB]">
+      <!-- Text & Button Section -->
+      <div
+        class="order-2 md:order-1 flex flex-col justify-center items-center gap-6 px-6 py-12 md:px-16"
+      >
+        <h2
+          class="font-extrabold text-4xl md:text-7xl text-center font-demiella text-[#285430]"
+        >
+          Catering, Gifting & Events
+        </h2>
+        <p
+          class="text-green font-ambit text-center font-semibold text-lg md:text-2xl max-w-2xl"
+        >
+          Our catering, gifting and events team is ready to fill your event or
+          celebration with a custom selection of Magnolia Bakery’s best
+          creations. No occasion is too large—or too small!
+        </p>
+        <button
+          class="group font-ambit font-extrabold uppercase text-2l flex items-center justify-center mx-auto py-2 px-3 font-medium text-gray-900 md:w-auto hover:bg-gray-50 md:hover:bg-transparent border-b border-gray-100 md:border-0 "
+        >
+          <svg
+            width="250"
+            height="70"
+            viewBox="0 0 247 63"
+            class="Button__svg transition-all duration-300 group-hover:stroke-blue-600 group-hover:fill-blue-100 stroke-gray-900 fill-transparent"
+          >
+            <path
+              d="M16.9012 8.22445L16.9038 8.21772L16.9064 8.21095C18.4849 3.99842 22.5504 1 27.3098 1H219.51C224.269 1 228.335 3.99842 229.913 8.21095L229.916 8.21771L229.919 8.22443C230.08 8.6379 230.364 9.00663 230.773 9.26037L230.784 9.26644C231.209 9.52284 231.632 9.77538 232.052 10.026C235.484 12.0751 238.7 13.9951 241.187 16.8374C243.926 19.9661 245.82 24.2766 245.82 31.26C245.82 38.2435 243.926 42.5539 241.187 45.6827C238.7 48.525 235.484 50.445 232.051 52.4942C231.634 52.7431 231.214 52.994 230.792 53.2486C230.347 53.5072 230.07 53.9085 229.919 54.2956L229.916 54.3024L229.913 54.3091C228.335 58.5217 224.269 61.52 219.51 61.52H27.3098C22.5504 61.52 18.4849 58.5217 16.9064 54.3091L16.9038 54.3024L16.9012 54.2956C16.7394 53.8822 16.4562 53.5135 16.0464 53.2598L16.0464 53.2597L16.0355 53.2531C15.6152 53.0003 15.1972 52.7513 14.7824 52.504C11.3448 50.4558 8.12348 48.5362 5.6325 45.6902C2.89424 42.5616 1 38.2487 1 31.26C1 24.2766 2.8941 19.9661 5.6325 16.8374C8.12018 13.9951 11.3361 12.0751 14.7683 10.026C15.1854 9.77696 15.6056 9.52605 16.0282 9.27136C16.4732 9.01276 16.7498 8.61149 16.9012 8.22445Z"
+              stroke-width="2"
+            ></path>
+            <text
+              x="50%"
+              y="50%"
+              text-anchor="middle"
+              dominant-baseline="middle"
+              class="fill-gray-900 group-hover:fill-blue-600 text-lg font-bold"
+              font-family="sans-serif"
+              font-size="16"
+            >
+              Get Started
+            </text>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Image Section -->
+      <div class="order-1 md:order-2 w-full">
+        <div class="overflow-hidden w-full h-full">
+          <img
+            src="./assets/Events/website02_1280x.png"
+            alt="Best Sellers"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+    <!--Join-->
+    <div
+      id="Join"
+      class="h-screen bg-[url('https://www.magnoliabakery.com/cdn/shop/files/Group_906.jpg?v=1650477935')] bg-cover bg-center bg-no-repeat px-4 flex items-center justify-center"
+    >
+      <div
+        class="flex flex-col items-center justify-center text-center gap-y-6 w-full max-w-3xl mx-auto"
+      >
+        <!-- Heading -->
+        <h2
+          class="font-extrabold text-4xl md:text-7xl text-[#285430] font-demiella"
+        >
+          Join our Newsletter
+        </h2>
+
+        <!-- Description -->
+        <p
+          class="font-ambit text-green-900 font-semibold text-lg md:text-2xl max-w-2xl"
+        >
+          Get the freshest Magnolia Bakery updates and offers right to your
+          inbox! Plus, enjoy 10% off on your birthday when you share the date
+          with us!
+        </p>
+
+        <!-- Newsletter Form -->
+        <form
+          id="Newsletter"
+          class="relative max-w-2xl mx-auto w-full px-4 py-12"
+        >
+          <!-- Desktop SVG -->
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 520 65"
+            fill="none"
+            class="svg--desktop hidden md:block absolute top-0 left-0 w-full h-full pointer-events-none z-0"
+          >
+            <path
+              d="M8.43002 2.53001C6.99002 4.75001 5.03002 6.58 2.74002 7.86C1.69002 8.45 1 9.52 1 10.72V53.64C1 54.84 1.69002 55.91 2.74002 56.5C5.03002 57.78 6.99002 59.61 8.43002 61.83C9.04002 62.77 10.06 63.36 11.18 63.36H508.68C509.8 63.36 510.82 62.77 511.43 61.83C512.87 59.62 514.83 57.78 517.12 56.5C518.17 55.91 518.86 54.84 518.86 53.64V10.72C518.86 9.52 518.17 8.45 517.12 7.86C514.83 6.58 512.87 4.75001 511.43 2.53001C510.82 1.59001 509.8 1 508.68 1H11.18C10.06 1 9.04002 1.59001 8.43002 2.53001Z"
+              stroke="#00211A"
+              stroke-width="2"
+            />
+          </svg>
+
+          <!-- Mobile SVG -->
+          <svg
+            aria-hidden="true"
+            viewBox="0 0 329 65"
+            fill="none"
+            class="svg--mobile md:hidden absolute top-0 left-0 w-full h-full pointer-events-none z-0"
+          >
+            <path
+              d="M8.43002 2.53001C6.99002 4.75001 5.03002 6.58 2.74002 7.86C1.69002 8.45 1 9.52 1 10.72V53.64C1 54.84 1.69002 55.91 2.74002 56.5C5.03002 57.78 6.99002 59.61 8.43002 61.83C9.04002 62.77 10.06 63.36 11.18 63.36H317.68C318.8 63.36 319.82 62.77 320.43 61.83C321.87 59.62 323.83 57.78 326.12 56.5C327.17 55.91 327.86 54.84 327.86 53.64V10.72C327.86 9.52 327.17 8.45 326.12 7.86C323.83 6.58 321.87 4.75001 320.43 2.53001C319.82 1.59001 318.8 1 317.68 1H11.18C10.06 1 9.04002 1.59001 8.43002 2.53001Z"
+              stroke="#00211A"
+              stroke-width="2"
+            />
+          </svg>
+
+          <!-- Input and Button Centered -->
+          <div class="relative z-10 flex items-center justify-center h-[65px]">
+            <div class="flex items-center gap-2 w-full max-w-xl">
+              <input
+                id="Newsletter.email"
+                name="email"
+                type="email"
+                required
+                placeholder="Enter Your Email Address"
+                class="flex-1 px-4 py-3 text-gray-900 bg-transparent border border-gray-300 rounded-md shadow-sm focus:ring-green-500 focus:border-green-500 placeholder-gray-500"
+              />
+              <button
+                type="submit"
+                aria-label="Subscribe"
+                class="text-green-800 hover:text-green-900 font-bold rounded-md flex items-center"
+              >
+                <svg
+                  width="18"
+                  height="15"
+                  viewBox="0 0 18 15"
+                  fill="none"
+                  class="mr-2"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11.3431 0.292892L17.7071 6.65685C18.0976 7.04738 18.0976 7.68054 17.7071 8.07107L11.3431 14.435C10.9526 14.8256 10.3195 14.8256 9.92893 14.435C9.53841 14.0445 9.53841 13.4113 9.92893 13.0208L14.5858 8.36396L0 8.36396V6.36396L14.5858 6.36396L9.92893 1.70711C9.53841 1.31658 9.53841 0.683417 9.92893 0.292892C10.3195 -0.097632 10.9526 -0.0976321 11.3431 0.292892Z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Error Message -->
+          <span
+            class="Newsletter__error text-red-500 mt-2 block text-sm"
+          ></span>
+        </form>
+      </div>
+    </div>
+    <!--Footer-->
+
+    <footer class="bg-emerald-200 ">
+      <div class="mx-auto w-full max-w-screen-xl">
+        <div class="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-3">
+          <div>
+            <img
+              src="./assets/logo/MB_Favicon_32x32.png"
+              alt=""
+              class="p-4 w-20"
+            />
+            <ul class="text-[#285430] font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">CAREERS</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">PRESS</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">INTERNATIONAL FRANCHISE</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">GIFT CARDS </a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">SUBSCRIPTION </a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">GIVING BACK </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="text-[#285430] font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline">HELP CENTER</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">REFUNDS & RETURNS</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">LOYALTY REWARDS PROGRAM</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline"
+                  >LOYALTY REWARDS PROGRAM TERMS</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">WHOLESALE</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">NEWSROOM</a>
+              </li>
+              <li class="mb-4">
+                <a href="#" class="hover:underline">ENTER OUR BAKE SALE </a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2
+              class="mb-6 font-extrabold text-3xl font-demiella text-gray-900 uppercase "
+            >
+              Have a question?
+            </h2>
+            <p class="mb-6">We're always here to lend a helping hand.</p>
+            <p class="mb-6">
+              Consumer Care Team hours are Monday-Friday, 9am - 5pm EST
+            </p>
+            <a href="#" class="hover:underline mb-6">CONTACT US</a>
+            <div
+            class="flex p-4 md:mt-0 space-x-5 rtl:space-x-reverse"
+          >
+            <a
+              href="#"
+              class="text-[#285430] hover:text-gray-900 "
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 8 19"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Facebook page</span>
+            </a>
+            <a
+              href="#"
+              class="text-[#285430] hover:text-gray-900 "
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 21 16"
+              >
+                <path
+                  d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z"
+                />
+              </svg>
+              <span class="sr-only">Discord community</span>
+            </a>
+            <a
+              href="#"
+              class="text-[#285430] hover:text-gray-900 "
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 17"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Twitter page</span>
+            </a>
+            <a
+              href="#"
+              class="text-[#285430] hover:text-gray-900 "
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">GitHub account</span>
+            </a>
+            <a
+              href="#"
+              class="text-[#285430] hover:text-gray-900 "
+            >
+              <svg
+                class="w-4 h-4"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+              <span class="sr-only">Dribbble account</span>
+            </a>
+          </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
+  </body>
+</html>
